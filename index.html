@@ -328,6 +328,19 @@ table.flowt th,table.flowt td{text-align:center}
 table.flowt th:first-child,table.flowt td:first-child{text-align:right}
 table.flowt td.neg{color:var(--red)}
 .cmp table.econt td{padding-top:24px;padding-bottom:24px}
+.cmp table.econt td{padding-top:24px;padding-bottom:24px}
+table.unit td{padding-top:19px;padding-bottom:19px;vertical-align:middle}
+table.unit td.ex{color:var(--muted);font-size:21px;line-height:1.4}
+table.unit td.n,table.sell td.n,table.sell th.n{text-align:center;white-space:nowrap}
+table.unit td.neg{color:var(--red)}
+table.unit tr.tot td{background:var(--blue);color:#fff;font-weight:800}
+table.unit tr.tot td.ex{color:rgba(255,255,255,.85);font-weight:500}
+table.unit tr.tot td:first-child{border-radius:0 14px 14px 0}
+table.unit tr.tot td:last-child{border-radius:14px 0 0 14px}
+table.sell td{padding-top:11px;padding-bottom:11px}
+table.sell tr.grp td{font-weight:800;color:var(--blue);font-size:18px;letter-spacing:.04em;padding-top:16px;border-bottom:0}
+table.sell tr.hl td{font-weight:800;color:var(--ink)}
+table.sell .gcol{background:var(--blue-mist)}
 .look .arr{display:grid;place-items:center;width:56px;color:var(--blue);font-size:34px;font-weight:900}
 /* closing */
 .closing .band{inset:0;clip-path:polygon(0 0,74% 0,48% 100%,0 100%)}
@@ -1251,37 +1264,49 @@ table.flowt td.neg{color:var(--red)}
   </div>
 </section>
 
-<!-- 40 ECONOMICS + ANNUAL -->
-<section class="slide" data-title="הכלכלה: הכנסה שנתית" data-ch="3" data-src="היעד של 1 עד 3 מיליון ₪ בחודש לקוח מהבריף ואינו תחזית. הפיילוט יקבע את שיעור הקנייה בפועל. עסקה ממוצעת של 1,900 ₪ לפי מחירי מכונות הכביסה באתר ברימאג.">
-  <div class="content cmp" style="bottom:118px">
-    <div class="title-block" style="flex-direction:row;justify-content:space-between;align-items:flex-end;margin-bottom:20px">
-      <div style="display:flex;flex-direction:column;gap:22px">
-        <span class="eyebrow" data-a>הכלכלה</span>
-        <h2 class="h2" data-a style="--i:1;max-width:1000px">כמה המהלך מכניס בשנה, <em>בשלושה תרחישים</em></h2>
-      </div>
-      <div class="seg" id="scSeg" data-a style="--i:2"><button data-c="1">מיליון ₪ בחודש</button><button data-c="2" class="on">2 מיליון ₪ בחודש</button><button data-c="3">3 מיליון ₪ בחודש</button></div>
+<!-- 40 UNIT ECONOMICS -->
+<section class="slide" data-title="מה נשאר מכל מכונה" data-ch="3" data-src="הנחות העבודה זהות למחשבון &quot;ביטוח מול מכירה&quot; ויוחלפו בנתוני ברימאג. החישוב לפני עלויות קבועות: צוות הטלמרקטינג, הסוכן והשיווק.">
+  <div class="content">
+    <div class="title-block" style="margin-bottom:28px">
+      <span class="eyebrow" data-a>הכלכלה, שלב 1</span>
+      <h2 class="h2" data-a style="--i:1">כל מכונה שנמכרת <em>משאירה כ-<span class="num">204</span> ₪ רווח נקי</em></h2>
     </div>
-    <div class="row" style="gap:26px;align-items:stretch">
-      <div class="card" data-a style="--i:3;flex:1.7;padding:8px 30px 14px">
-        <table class="t econt" id="scT" style="font-size:23px">
-          <thead><tr><th style="width:44%">מיליוני ₪ בשנה</th><th>מיליון בחודש</th><th class="gcol"><span class="num">2</span> מיליון בחודש</th><th><span class="num">3</span> מיליון בחודש</th></tr></thead>
-          <tbody>
-            <tr><td>יחידות בשנה</td><td><span class="num">6,300</span></td><td class="gcol"><span class="num">12,600</span></td><td><span class="num">18,900</span></td></tr>
-            <tr><td>הכנסות ממכירה, כולל תוספת <span class="num">90</span> ₪ ליחידה</td><td><span class="num">12.6</span></td><td class="gcol"><span class="num">25.1</span></td><td><span class="num">37.7</span></td></tr>
-            <tr><td>רווח גולמי לפני ביטוח ואחריות</td><td><span class="num">2.2</span></td><td class="gcol"><span class="num">4.3</span></td><td><span class="num">6.5</span></td></tr>
-            <tr><td>רווח נקי, עם תוספת מחיר</td><td><span class="num">1.3</span></td><td class="gcol"><span class="num">2.6</span></td><td><span class="num">3.9</span></td></tr>
-            <tr><td>רווח נקי, בלי תוספת מחיר</td><td><span class="num">0.7</span></td><td class="gcol"><span class="num">1.4</span></td><td><span class="num">2.1</span></td></tr>
-            <tr><td>ביטוח המשך, מהשנה הרביעית</td><td><span class="num">0.5</span></td><td class="gcol"><span class="num">0.9</span></td><td><span class="num">1.4</span></td></tr>
-          </tbody>
+    <div class="card" data-a style="--i:2;padding:8px 34px 14px">
+      <table class="t unit" style="font-size:23px">
+        <thead><tr><th style="width:27%">₪ לכל מכונה</th><th class="n" style="width:11%">סכום</th><th>מה זה אומר</th></tr></thead>
+        <tbody><tr><td>מחיר ממוצע למכונה</td><td class="n"><span class="num">1,900</span></td><td class="ex">עסקה ממוצעת לפי מחירי מכונות הכביסה באתר ברימאג.</td></tr><tr><td>רווח גולמי מהמכירה</td><td class="n"><span class="num">342</span></td><td class="ex"><span class="num">18%</span> ממחיר המכונה. זה מה שנשאר לברימאג לפני ההוצאות שבשורות הבאות.</td></tr><tr><td>קונים שהיו קונים בכל מקרה</td><td class="n neg"><span class="num">-68</span></td><td class="ex">מניחים ש-<span class="num">20%</span> מהקונים היו קונים מכונה מברימאג גם בלי המהלך. הרווח מהם לא נספר כרווח חדש.</td></tr><tr><td>תוספת מחיר במסלול המוביל</td><td class="n"><span class="num">+90</span></td><td class="ex">הלקוח משלם <span class="num">90</span> ₪ יותר תמורת האחריות הארוכה.</td></tr><tr><td>ביטוח שלא יימכר</td><td class="n neg"><span class="num">-90</span></td><td class="ex">היום <span class="num">30%</span> מהקונים קונים ביטוח, ברווח של <span class="num">300</span> ₪ לפוליסה. כשהאחריות כלולה, הרווח הזה הולך.</td></tr><tr><td>עלות האחריות הכלולה</td><td class="n neg"><span class="num">-70</span></td><td class="ex">תיקונים שברימאג שירות עושה על חשבונה בתקופת האחריות.</td></tr>
+          <tr class="tot"><td>רווח נקי לכל מכונה</td><td class="n"><span class="num">204</span></td><td class="ex"><span class="num">342</span> פחות <span class="num">68</span>, ועוד <span class="num">90</span>, פחות <span class="num">90</span>, פחות <span class="num">70</span>.</td></tr>
+          <tr><td>בלי תוספת המחיר</td><td class="n"><span class="num">114</span></td><td class="ex">אם לא מוסיפים <span class="num">90</span> ₪ למחיר, נשארים <span class="num">114</span> ₪ נקי לכל מכונה.</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- 41 HOW MUCH TO SELL -->
+<section class="slide bg" data-title="כמה צריך למכור" data-ch="3" data-src="היעד של 1 עד 3 מיליון ₪ מכירות בחודש לקוח מהבריף ואינו תחזית. הפיילוט יקבע כמה מכונות נמכרות בפועל. החישוב לפני עלויות קבועות.">
+  <div class="content" style="bottom:118px">
+    <div class="title-block" style="margin-bottom:26px">
+      <span class="eyebrow" data-a>הכלכלה, שלב 2</span>
+      <h2 class="h2" data-a style="--i:1">כמה מכונות צריך למכור בחודש, <em>וכמה זה משאיר בחודש ובשנה</em></h2>
+    </div>
+    <div class="row" style="gap:26px;align-items:stretch;flex:1;min-height:0">
+      <div class="card" data-a style="--i:2;flex:1.75;padding:6px 30px 10px">
+        <table class="t sell" style="font-size:22px">
+          <thead><tr><th style="width:40%">שלושה יעדים מהבריף</th><th class="n">כמיליון ₪ בחודש</th><th class="n gcol">כ-<span class="num">2</span> מיליון ₪ בחודש</th><th class="n">כ-<span class="num">3</span> מיליון ₪ בחודש</th></tr></thead>
+          <tbody><tr class="grp"><td colspan="4">בחודש</td></tr><tr class=""><td>מכונות שנמכרות בחודש</td><td class="n"><span class="num">525</span></td><td class="n gcol"><span class="num">1,050</span></td><td class="n"><span class="num">1,575</span></td></tr><tr class=""><td>מכירות בחודש, כולל תוספת המחיר</td><td class="n"><span class="num">1.04</span> מיליון ₪</td><td class="n gcol"><span class="num">2.09</span> מיליון ₪</td><td class="n"><span class="num">3.13</span> מיליון ₪</td></tr><tr class="hl"><td>רווח נקי בחודש</td><td class="n"><span class="num">107</span> אלף ₪</td><td class="n gcol"><span class="num">214</span> אלף ₪</td><td class="n"><span class="num">321</span> אלף ₪</td></tr><tr class="grp"><td colspan="4">בשנה</td></tr><tr class=""><td>מכונות שנמכרות בשנה</td><td class="n"><span class="num">6,300</span></td><td class="n gcol"><span class="num">12,600</span></td><td class="n"><span class="num">18,900</span></td></tr><tr class=""><td>מכירות בשנה, כולל תוספת המחיר</td><td class="n"><span class="num">12.5</span> מיליון ₪</td><td class="n gcol"><span class="num">25.1</span> מיליון ₪</td><td class="n"><span class="num">37.6</span> מיליון ₪</td></tr><tr class="hl"><td>רווח נקי בשנה</td><td class="n"><span class="num">1.28</span> מיליון ₪</td><td class="n gcol"><span class="num">2.57</span> מיליון ₪</td><td class="n"><span class="num">3.85</span> מיליון ₪</td></tr><tr class=""><td>רווח נקי בשנה, בלי תוספת המחיר</td><td class="n"><span class="num">0.72</span> מיליון ₪</td><td class="n gcol"><span class="num">1.43</span> מיליון ₪</td><td class="n"><span class="num">2.15</span> מיליון ₪</td></tr><tr class=""><td>ביטוח המשך, מהשנה הרביעית ואילך</td><td class="n"><span class="num">0.47</span> מיליון ₪</td><td class="n gcol"><span class="num">0.95</span> מיליון ₪</td><td class="n"><span class="num">1.42</span> מיליון ₪</td></tr></tbody>
         </table>
       </div>
       <div class="col" style="flex:1;gap:20px">
-        <div class="card blue stat" data-a style="--i:4"><div class="v" style="color:#fff"><span class="num" id="scNet">2.6</span></div><div class="l" style="color:rgba(255,255,255,.88)">מיליון ₪ רווח נקי בשנה, עם תוספת מחיר</div></div>
-        <div class="card flat" data-a style="--i:5;background:#fff;flex:1;padding:22px 26px"><span class="k">מאיפה יגיעו היחידות</span><p class="body" style="font-size:19px">טלמרקטינג לבעלי בקו בעדיפות א, הצעה בביקורי שירות אצל בעלי בקו, ופנייה בוואטסאפ לשאר הבסיס. היעד המדויק לכל ערוץ ייקבע לפי נתוני הפיילוט.</p></div>
-        <div class="card flat" data-a style="--i:6;background:#fff;flex:1;padding:22px 26px"><span class="k">מעבר לרווח הגולמי</span><p class="body" style="font-size:19px">האחריות הכלולה יוצרת רגע מכירה מתוזמן לביטוח המשך, ומסלול <span class="lat">GRAETZ UPGRADE</span> נועל את המכירה הבאה. כל מכירה מקטינה את התלות ב-<span class="lat">LG</span>.</p></div>
+        <div class="ctl" data-a style="--i:3;padding:32px 32px;gap:26px;flex:1;justify-content:center">
+          <span class="k" style="margin:0;font-size:22px">ומה אם מתחילים מהרווח?</span>
+          <label><span class="lt">רווח נקי רצוי בחודש <b id="pT">200 אלף ₪</b></span><input type="range" id="rP" min="50" max="400" step="10" value="200"></label>
+          <p class="body" style="font-size:25px;line-height:1.55">צריך למכור <b id="pU" style="color:var(--blue)">983</b> מכונות בחודש, כלומר מכירות של כ-<b id="pS" style="color:var(--blue)">1.96</b>&nbsp;מיליון&nbsp;₪ בחודש. בשנה זה רווח נקי של <b id="pY" style="color:var(--blue)">2.4</b>&nbsp;מיליון&nbsp;₪.</p>
+        </div>
+        <div class="card flat" data-a style="--i:4;background:#fff;padding:22px 26px"><span class="k">מאיפה יגיעו המכירות</span><p class="body" style="font-size:19px">טלמרקטינג לבעלי בקו בעדיפות א, הצעה בביקורי שירות, ופנייה בוואטסאפ לשאר הבסיס. היעד לכל ערוץ ייקבע לפי נתוני הפיילוט.</p></div>
       </div>
     </div>
-    <div class="msg" data-a style="--i:7;margin-top:16px;padding:14px 28px;font-size:20px">איך לקרוא: הרווח הנקי כבר אחרי הביטוח שלא נמכר ועלות האחריות, ובחישוב מחמיר שסופר רק <span class="num">80%</span> מהקונים כלקוחות חדשים. אם רוב הקונים חדשים, הרווח בתרחיש האמצעי מגיע לכ-<span class="num">3.4</span> מיליון ₪.</div>
+    <div class="msg" data-a style="--i:6;margin-top:18px;padding:16px 30px;font-size:21px">איך לקרוא: כל מכונה משאירה כ-<span class="num">204</span> ₪ נקי, ולכן הרווח גדל יחד עם המכירות כבר מהמכונה הראשונה. ביטוח ההמשך נכנס רק מהשנה הרביעית, ולא כלול ברווח הנקי.</div>
   </div>
 </section>
 
@@ -1550,9 +1575,10 @@ function calc(){
 $('calcReset').onclick=()=>{$('rNew').value=D.New;$('rAdd').value=D.Add;$('rIns').value=D.Ins;$('rCost').value=D.Cost;calc();};
 calc();
 
-// economics scenarios
-const scSeg=document.getElementById('scSeg'),scT=document.getElementById('scT');const NET={1:'1.3',2:'2.6',3:'3.9'};
-scSeg.querySelectorAll('button').forEach(b=>b.onclick=()=>{const c=+b.dataset.c;scSeg.querySelectorAll('button').forEach(x=>x.classList.toggle('on',x===b));scT.querySelectorAll('tr').forEach(tr=>[...tr.children].forEach((td,i)=>td.classList.toggle('gcol',i===c)));document.getElementById('scNet').textContent=NET[c];});
+// profit target
+const rP=document.getElementById('rP');
+function prof(){const t=+rP.value*1000,u=Math.ceil(t/203.6);document.getElementById('pT').textContent=rP.value+' אלף ₪';document.getElementById('pU').textContent=u.toLocaleString('en-US');document.getElementById('pS').textContent=(u*1990/1e6).toFixed(2);document.getElementById('pY').textContent=(t*12/1e6).toFixed(1);setP(rP);}
+rP.addEventListener('input',prof);prof();
 })();
 </script>
 </body>
